@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thandava - The Divine Dance of Kathakali</title>
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/2.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-hover {
+            transition: transform 0.3s ease-in-out;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+        }
+        @keyframes fireGlow {
+            0% { text-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff4d4d; }
+            50% { text-shadow: 0 0 15px #ff4d4d, 0 0 25px #ff4d4d; }
+            100% { text-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff4d4d; }
+        }
+        .fire-text {
+            animation: fireGlow 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-60 bg-black border-b border-red-800">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <a href="index.html">
+                <h1 class="text-3xl font-bold text-red-500">THANDAVA</h1>
+            </a>
+            <div class="space-x-8">
+                <a href="index.html" class="hover:text-red-500 transition">Home</a>
+                <a href="#about" class="hover:text-red-500 transition">About</a>
+                <a href="#competitions" class="hover:text-red-500 transition">Competitions</a>
+                <a href="#contact" class="hover:text-red-500 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-gradient min-h-screen flex items-center">
+        <div class="container flex items-center justify-between mx-auto px-4 py-20">
+            <div class="max-w-3xl">
+                <h1 class="text-6xl font-bold mb-6 fire-text">Thandava 2025</h1>
+                <p class="text-2xl mb-8 text-red-400">Where divine expressions meet mortal forms - Experience the mystical art of Kathakali</p>
+                <button class="bg-red-600 px-8 py-4 rounded-lg font-bold hover:bg-red-700 transition transform hover:scale-105">
+                    Begin Your Journey
+                </button>
+            </div>
+            <!-- <img src="img/1.svg" alt=""> -->
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="py-20 bg-gradient-to-b from-black to-red-900" id="about">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 fire-text">The Divine Art of Kathakali</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold text-red-400">Sacred Traditions</h3>
+                    <p class="text-gray-300">Enter the realm where gods and demons come alive through the ancient art of Kathakali. Experience the intricate makeup, elaborate costumes, and mesmerizing expressions that tell tales from Indian mythology.</p>
+                </div>
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold text-red-400">The Fire Dance</h3>
+                    <p class="text-gray-300">Witness the spectacular fire performances that light up the night, as dancers weave through flames in their magnificent attire, creating an otherworldly spectacle that has captivated audiences for centuries.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Competition Section -->
+    <div class="py-20 bg-black" id="competitions">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 fire-text">Sacred Competitions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Traditional Performance -->
+                <div class="bg-gradient-to-b from-red-900 to-black rounded-lg overflow-hidden card-hover border border-red-800">
+                    <img src="img/2.jpeg" alt="Kathakali Performance" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-red-400">Traditional Kathakali</h3>
+                        <p class="text-gray-300 mb-4">Present a classical Kathakali performance, showcasing the nine emotions (Navarasas) through traditional storytelling.</p>
+                        <button class="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition">Enter Now</button>
+                    </div>
+                </div>
+
+                <!-- Fire Performance -->
+                <div class="bg-gradient-to-b from-red-900 to-black rounded-lg overflow-hidden card-hover border border-red-800">
+                    <img src="img/3.jpeg" alt="Fire Dance" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-red-400">Agni Nritya</h3>
+                        <p class="text-gray-300 mb-4">Master the art of fire manipulation while maintaining the grace and precision of classical dance forms.</p>
+                        <button class="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition">Enter Now</button>
+                    </div>
+                </div>
+
+                <!-- Costume & Makeup -->
+                <div class="bg-gradient-to-b from-red-900 to-black rounded-lg overflow-hidden card-hover border border-red-800">
+                    <img src="img/4.jpeg" alt="Costume Competition" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-red-400">Divine Decoration</h3>
+                        <p class="text-gray-300 mb-4">Showcase your expertise in traditional Kathakali costume design and the sacred art of Chutti makeup.</p>
+                        <button class="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition">Enter Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black border-t border-red-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-red-500">Contact</h3>
+                    <p class="text-gray-400">Name: Sandesh V Anthony</p>
+                    <p class="text-gray-400">Phone: +91 123 456 7890</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-red-500">Venue</h3>
+                    <p class="text-gray-400">Mar Baselios Christian College of Engneering and Technology,</p>
+                    <p class="text-gray-400">Peermade, Idukki, Kerala</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-red-500">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/thandava2k25/" target="_blank" class="text-gray-400 hover:text-red-500">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
