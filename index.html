@@ -2,72 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thandava - The Divine Dance of Kathakali</title>
     <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <style>
-        .hero-gradient {
-            background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/2.png');
-            background-size: cover;
-            background-position: center;
-        }
-        .card-hover {
-            transition: transform 0.3s ease-in-out;
-        }
-        .card-hover:hover {
-            transform: translateY(-10px);
-        }
-        @keyframes fireGlow {
-            0% { text-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff4d4d; }
-            50% { text-shadow: 0 0 15px #ff4d4d, 0 0 25px #ff4d4d; }
-            100% { text-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff4d4d; }
-        }
-        .fire-text {
-            animation: fireGlow 2s infinite;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="bg-black text-white">
     <!-- Navigation -->
-    <nav class="fixed w-full z-60 bg-black border-b border-red-800">
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <a href="index.html">
-                <h1 class="text-3xl font-bold text-red-500">THANDAVA</h1>
-            </a>
-            <div class="space-x-8">
+    <nav class="fixed w-full z-50 bg-black border-b border-red-800">
+        <div class="container mx-auto flex flex-wrap justify-between items-center p-4">
+            <a href="index.html" class="text-3xl font-bold text-red-500">THANDAVA</a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
                 <a href="index.html" class="hover:text-red-500 transition">Home</a>
                 <a href="#about" class="hover:text-red-500 transition">About</a>
                 <a href="#competitions" class="hover:text-red-500 transition">Competitions</a>
                 <a href="#contact" class="hover:text-red-500 transition">Contact</a>
             </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white p-2" onclick="toggleMenu()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+            
+            <!-- Mobile Menu Items -->
+            <div id="mobileMenu" class="hidden w-full md:hidden mt-4">
+                <a href="index.html" class="block py-2 hover:text-red-500 transition">Home</a>
+                <a href="#about" class="block py-2 hover:text-red-500 transition">About</a>
+                <a href="#competitions" class="block py-2 hover:text-red-500 transition">Competitions</a>
+                <a href="#contact" class="block py-2 hover:text-red-500 transition">Contact</a>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <div class="hero-gradient min-h-screen flex items-center">
-        <div class="container flex items-center justify-between mx-auto px-4 py-20">
-            <div class="max-w-3xl">
-                <h1 class="text-6xl font-bold mb-6 fire-text">Thandava 2025</h1>
-                <p class="text-2xl mb-8 text-red-400">Where divine expressions meet mortal forms - Experience the mystical art of Kathakali</p>
-                <button class="bg-red-600 px-8 py-4 rounded-lg font-bold hover:bg-red-700 transition transform hover:scale-105">
+    <div class="hero-gradient min-h-screen flex items-center sm:items-end pt-16">
+        <div class="container mx-auto px-4 py-20">
+            <div class="max-w-3xl sm:max-w-4xl text-center mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 fire-text">Thandava 2025</h1>
+                <p class="text-xl md:text-2xl mb-8 text-red-400">Where divine expressions meet mortal forms - Experience the mystical art of Kathakali</p>
+                <button class="bg-red-600 px-6 py-3 md:px-8 md:py-4 rounded-lg font-bold hover:bg-red-700 transition transform hover:scale-105">
                     Begin Your Journey
                 </button>
             </div>
-            <!-- <img src="img/1.svg" alt=""> -->
         </div>
     </div>
 
     <!-- About Section -->
-    <div class="py-20 bg-gradient-to-b from-black to-red-900" id="about">
+    <div class="py-16 md:py-20 bg-gradient-to-b from-black to-red-900" id="about">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-16 fire-text">The Divine Art of Kathakali</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-                <div class="space-y-6">
-                    <h3 class="text-2xl font-semibold text-red-400">Sacred Traditions</h3>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16 fire-text">The Divine Art of Kathakali</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
+                <div class="space-y-4 md:space-y-6">
+                    <h3 class="text-xl md:text-2xl font-semibold text-red-400">Sacred Traditions</h3>
                     <p class="text-gray-300">Enter the realm where gods and demons come alive through the ancient art of Kathakali. Experience the intricate makeup, elaborate costumes, and mesmerizing expressions that tell tales from Indian mythology.</p>
                 </div>
-                <div class="space-y-6">
-                    <h3 class="text-2xl font-semibold text-red-400">The Fire Dance</h3>
+                <div class="space-y-4 md:space-y-6">
+                    <h3 class="text-xl md:text-2xl font-semibold text-red-400">The Fire Dance</h3>
                     <p class="text-gray-300">Witness the spectacular fire performances that light up the night, as dancers weave through flames in their magnificent attire, creating an otherworldly spectacle that has captivated audiences for centuries.</p>
                 </div>
             </div>
@@ -75,10 +71,11 @@
     </div>
 
     <!-- Competition Section -->
-    <div class="py-20 bg-black" id="competitions">
+    <div class="py-16 md:py-20 bg-black" id="competitions">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-16 fire-text">Sacred Competitions</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16 fire-text">Sacred Competitions</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Competition cards remain the same -->
                 <!-- Traditional Performance -->
                 <div class="bg-gradient-to-b from-red-900 to-black rounded-lg overflow-hidden card-hover border border-red-800">
                     <img src="img/2.jpeg" alt="Kathakali Performance" class="w-full h-48 object-cover">
@@ -123,7 +120,7 @@
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4 text-red-500">Venue</h3>
-                    <p class="text-gray-400">Mar Baselios Christian College of Engneering and Technology,</p>
+                    <p class="text-gray-400">Mar Baselios Christian College of Engineering and Technology,</p>
                     <p class="text-gray-400">Peermade, Idukki, Kerala</p>
                 </div>
                 <div>
@@ -135,5 +132,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
